@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popular US Baby Names</title>
+    <link rel="stylesheet" href="static/styles/style.css"/>
+    
+</head>
+<body>
+    <header class="header">
+        <img src="static\images\baby_head_header.png" alt = "Header Image" class = "header-image">
+        <h1 class="header-text">Popular Baby Names</h1>
+    </header>
+   
+    <h2>Discover the most popular US baby names for any year(s) between 1880 and 2022. Search by year, group, or range of years.</h2>
+    
+    <form action="/" method="post">
+        <!--This gives the user the input options and examples-->
+        <p id="search">Please select how you'd like to search:</p>
+        
+            <label>
+                <input type="radio" name="selected_option" value="single"> a single year (ex: 1945)
+            </label><br>
+            <label>
+                <input type="radio" name="selected_option" value="list"> a list (ex: 1900, 1950, 2000)
+            </label><br>
+            <label>
+                <input type="radio" name="selected_option" value="range"> a range (ex: 1990-1995)
+            </label><br>
+            <!--This is where the user inputs their search criteria-->
+            <label for="user_input">Enter the year(s) to search in the input box:</label>
+                <input type="text" id="user_input" name="user_input" required placeholder = "ex: 2000"><br>
+                <!--This creates the clickable submit button-->
+                <button onClick="getRadioValue()"> Submit </button>
+    </form>
+          <!--This calls the functions to check input validity-->
+    <script src="addingInRadioButtons.js"></script>  
+</body>
+</html>
